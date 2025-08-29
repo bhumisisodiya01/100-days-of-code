@@ -1,0 +1,30 @@
+//Q14: Write a program to input a character and check whether it is a vowel or consonant using if–else.
+
+/*
+Sample Test Cases:
+Input 1:
+a
+Output 1:
+Vowel
+
+Input 2:
+b
+Output 2:
+Consonant
+
+*/
+#include<stdio.h>
+int main(){
+    int y;
+    printf("enter the year to be checked");
+    scanf("%d",&y);
+    if(y%4==0 && y%100!=0){
+        printf("%d is a leap year",y);
+    }else if (y%400==0){
+        printf("%d is a leap y");
+    }
+    else{
+        printf("%d is not a leap y");
+    }
+    return 0;
+}
