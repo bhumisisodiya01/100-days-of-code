@@ -1,0 +1,47 @@
+//Q19: Write a program to classify a triangle as Equilateral, Isosceles, or Scalene based on its side lengths.
+
+/*
+Sample Test Cases:
+Input 1:
+3 3 3
+Output 1:
+Equilateral
+
+Input 2:
+3 3 4
+Output 2:
+Isosceles
+
+Input 3:
+2 3 4
+Output 3:
+Scalene
+
+*/
+#include <stdio.h>
+int main()
+{
+    int S1, S2 ,S3 ;
+    printf ("Enter the value of Side 1\n");
+    scanf ("%d", &S1);
+    printf ("Enter the value of Side 2\n");
+    scanf ("%d", &S2);
+    printf ("Enter the value of Side 3\n");
+    scanf ("%d", &S3);
+    if (((S1+S2)>S3)&&((S2+S3)>S1)&&((S1+S3)>S2))
+    {
+        if((S1==S2)&&(S2==S3))
+        {
+            printf("Equilateral");
+        }
+        else if ((S1==S2) || (S2==S3) || (S3==S1)){
+        printf("Isosceles");}
+    else{
+        printf("Scalene");
+        }
+    }
+    else{
+        printf("Triangle is invalid");
+    }
+    return 0;
+}
