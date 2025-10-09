@@ -1,0 +1,25 @@
+Q99: Change the date format from dd/04/yyyy to dd-Apr-yyyy.
+
+/*
+Sample Test Cases:
+Input 1:
+15/04/2025
+Output 1:
+15-Apr-2025
+
+*/
+#include <stdio.h>
+
+int main() {
+    char str[20];
+    int i;
+    gets(str);
+    for(i = 0; str[i] != '\0'; i++) {
+        if(str[i] == '/' && str[i+1] == '0' && str[i+2] == '4') {
+            printf("-Apr-");
+            i += 2;
+        } else if(str[i] != '/')
+            printf("%c", str[i]);
+    }
+    return 0;
+}
